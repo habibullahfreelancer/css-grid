@@ -1,0 +1,94 @@
+ /* default css */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    background: #fff;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*  css */
+  .container {
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 5px auto;
+    border: 2px solid #212121;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(11, minmax(100px, auto));
+  }
+  .header,
+  .nav,
+  .image_scrollbar,
+  .products,
+  .aside,
+  .footer {
+    padding-top: 25px;
+    border: 2px solid #000;
+  }
+  .header {
+    background: #a9a9a9;
+    grid-column: 1/9;
+    grid-row: 1/3;
+  }
+  .nav {
+    grid-column: 1/9;
+    grid-row: 3/4;
+    background: #00008b;
+    /* align-items: center; */
+    padding: 15px;
+    /* height: 100%; */
+    /* align-self: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    /* justify-content: space-around; */
+  }
+  .nav > div {
+    background-color: #5f9ea0;
+    border: 1px solid #000;
+    height: 100%;
+    padding: 20px 0;
+  }
+  .nav > div a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .image_scrollbar {
+    background: #b8860b;
+    grid-column: 1/9;
+    grid-row: 4/6;
+  }
+  .products {
+    background: green;
+    grid-column: 1/9;
+    grid-row: 6/11;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 5%;
+    color: #000;
+    padding: 2%;
+  }
+  .products > div {
+    padding: 100px;
+    background: cyan;
+    padding: 90px 0;
+    border: 1px solid #000;
+  }
+
+  .footer {
+    background: #8b0000;
+    grid-column: 1/9;
+    grid-row: 11/12;
+  }
