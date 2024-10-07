@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>CSS grid practice</title>
+    <style type="text/css">
+      /* default css */
+      *:not(p) {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background: #fff;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /*  css */
+      .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 5px auto;
+        border: 2px solid #212121;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+          "header header header header"
+          "nav nav nav nav"
+          "article article article aside"
+          "footer footer footer footer";
+      }
+      .header {
+        grid-area: header;
+      }
+      .header img {
+        height: 100%;
+      }
+      .nav {
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: #212121;
+      }
+      .nav div {
+        border: 1px solid #fff;
+      }
+      .nav div > a {
+        display: block;
+        text-decoration: none;
+        padding: 15px 0;
+        color: #fff;
+        font-size: 150%;
+        text-align: center;
+        height: 100%;
+        font-weight: bold;
+      }
+      .nav div > a:hover {
+        background: #757575;
+      }
+
+      /* .nav ul {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        background: #212121;
+        justify-content: space-evenly;
+      }
+      .nav ul li {
+        border: 1px solid #fff;
+      }
+      
+      .nav ul li a {
+        text-decoration: none;
+        padding: 0.7rem 5.4rem;
+        color: #fff;
+        font-size: 1.5rem;
+        display: inline-block;
+      }
+      .nav ul li a:hover {
+        background: #757575;
+      } */
+      .article {
+        grid-area: article;
+        border: 2px solid;
+        border-left: 0;
+        padding: 1rem;
+        font-size: 1.3rem;
+      }
+      .article h1 {
+        font-size: 3.2em;
+        text-align: center;
+      }
+      .aside {
+        font-size: 1.3rem;
+        grid-area: aside;
+        border: 2px solid;
+        border-left: 0;
+        border-right: 0;
+        padding: 1rem;
+      }
+      .aside h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .footer {
+        background: #212121;
+        color: #fff;
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer_left {
+        padding-left: 3%;
+        font-size: 1.2rem;
+      }
+      .footer_left p {
+        margin: 0;
+      }
+      .footer_right_menu ul {
+        list-style: none;
+        background: #212121;
+      }
+      .footer_right_menu ul li {
+        display: inline-block;
+        border: 1px solid #fff;
+      }
+      .footer_right_menu ul li a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.7rem 2rem;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+      .footer_right_menu ul li a:hover {
+        background: #757575;
+      }
+      @media all and (max-width: 600px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="header.jpg" alt="" />
+      </header>
+      <nav class="nav">
+        <!-- <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Store</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Contact</a></li>
+        </ul> -->
+        <div><a href="">Home</a></div>
+        <div><a href="">Store</a></div>
+        <div><a href="">Gallery</a></div>
+        <div><a href="">Contact</a></div>
+      </nav>
+      <article class="article">
+        <h1>About Us</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum
+        </p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum
+        </p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum
+        </p>
+      </article>
+      <aside class="aside">
+        <h2>Sidebar</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum
+        </p>
+      </aside>
+      <footer class="footer">
+        <div class="footer_left">
+          <p>Copyright &copy; 2024</p>
+        </div>
+        <div class="footer_right_menu">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
