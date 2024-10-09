@@ -1,0 +1,97 @@
+ /* default css */
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.pad5{
+  padding: 5% 0;
+}
+.padl5{
+  padding: 0 5%;
+}
+
+/*  css */
+.container {
+  margin: 100px auto;
+  font-size: 1.2rem;
+  display: grid;
+  line-height: 1.3;
+  grid-template-columns: 0.5fr 2.2fr 0.3fr;
+  grid-template-areas:
+    ". heading ."
+     ". iframe ."
+    ". content_poet ."
+    ". build .";
+}
+.pad10 {
+  padding: 5% 0 3%;
+}
+.large10 {
+  font-size: 80px;
+  line-height: 1.2;
+  color: #444;
+}
+.text_right {
+  text-align: right;
+}
+.heading {
+  grid-area: heading;
+}
+.heading h2 {
+  max-width: 58%;
+  font-size: 80px;
+  line-height: 1.2;
+  color: #444;
+}
+.content_poet {
+  grid-area: content_poet;
+}
+.grandfather {
+  display: flex;
+  column-gap: 20px;
+}
+.grandfather:first-child {
+  padding: 5% 10%;
+}
+.baseball {
+  padding-right: 15%;
+}
+.build {
+  grid-area: build;
+}
+.early{
+ display: flex;
+}
+.youtube{
+ border-right: 2px solid orange;
+ padding: 5% 0;
+}
+.yellow{
+ text-decoration: underline wavy orange;
+}
+.pad_left5{
+ padding-left: 5%;
+}
+.polaroid{
+ display: flex;
+}
+.polaroid_right{
+ max-width: 35%;
+ padding: 5%;
+}
+.iframe{
+  grid-area: iframe;
+  width:560px;
+  max-width: 100%;
+  margin: auto;
+}
